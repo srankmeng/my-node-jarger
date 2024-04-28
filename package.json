@@ -1,0 +1,31 @@
+{
+  "name": "my-node-jaeger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start app0.js app1_0.js app2_0.js app2_1.js",
+    "delete": "pm2 delete app0 app1_0 app2_0 app2_1",
+    "app0": "node app0.js",
+    "app1_0": "node app1_0.js",
+    "app2_0": "node app2_0.js",
+    "app2_1": "node app2_1.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.8.0",
+    "@opentelemetry/exporter-jaeger": "^1.24.0",
+    "@opentelemetry/instrumentation": "^0.51.0",
+    "@opentelemetry/instrumentation-http": "^0.51.0",
+    "@opentelemetry/propagator-jaeger": "^1.24.0",
+    "@opentelemetry/resources": "^1.24.0",
+    "@opentelemetry/sdk-trace-base": "^1.24.0",
+    "@opentelemetry/sdk-trace-node": "^1.24.0",
+    "@opentelemetry/semantic-conventions": "^1.24.0",
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "opentelemetry-instrumentation-express": "^0.40.0"
+  }
+}
